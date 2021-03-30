@@ -11,6 +11,14 @@ class ActionProvider {
       this.addMessageToState(message);
     };
 
+    handleJavascriptQuiz = () => {
+      const message = this.createChatBotMessage("Fanstatic. Here is your quiz. Good luck",
+      {
+        widget:"javascriptQuiz",
+      });
+      this.addMessageToState(message)
+    }
+
     addMessageToState = (message) => {
       this.setState(prevState =>({
           ...prevState,
